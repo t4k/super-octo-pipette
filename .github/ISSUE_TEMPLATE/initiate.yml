@@ -1,0 +1,15 @@
+name: Initiate Process
+description: Initiate the process
+title: "Process Initiated"
+labels: ["actions"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to initiate this process!
+  - type: input
+    id: identifier
+    attributes:
+      label: Identifier
+      description: Enter the identifier to be processed. Optional.
+      placeholder: "Example: ID_123"
