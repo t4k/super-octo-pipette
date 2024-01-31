@@ -19,6 +19,6 @@ jobs:
 
       # TODO run external process
 
-      - run: gh issue close ${{ github.event.issue.id }} --comment "handed off to external process"
+      - run: gh issue close ${{ github.event.issue.number }} --comment "handed off to external process"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
