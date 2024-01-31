@@ -13,3 +13,9 @@ body:
       label: Identifier
       description: Enter the identifier to be processed. Optional.
       placeholder: "Example: ID_123"
+  - type: textarea
+    id: upload
+    attributes:
+      label: File Upload
+      description: Upload a file.
+      placeholder: "Drag and drop a file here."
