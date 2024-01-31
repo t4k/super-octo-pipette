@@ -1,0 +1,25 @@
+name: Run Process
+on:
+  issues:
+    types: opened
+concurrency: 'main'
+jobs:
+  job_1:
+    # TODO authorize via github.event.issue.author_association
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: stefanbuck/github-issue-praser@v3
+        id: issue-parser
+        with:
+          template-path: .github/ISSUE_TEMPLATE/initiate.yml
+
+      - run: echo '${{ steps.issue-parser.outputs.jsonString }}'
+
+      # TODO run external process
+
+      - run: gh issue close $ISSUE --comment "handed off to external process"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE: ${{ github.event.issue.html_url }}

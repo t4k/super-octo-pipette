@@ -6,3 +6,6 @@
 - [`initiate.yml`](.github/ISSUE_TEMPLATE/initiate.yml)
 
 ## set up actions that will respond to new issues
+
+- [`run.yml`](.github/workflows/run.yml)
+  - parse the newly created issue and use the data in an external process
