@@ -8,6 +8,8 @@ jobs:
     # TODO authorize via github.event.issue.author_association
     runs-on: ubuntu-latest
     steps:
+      - run: echo '${{ github.event.issue.author_association }}'
+
       - uses: actions/checkout@v4
 
       - uses: stefanbuck/github-issue-praser@v3
