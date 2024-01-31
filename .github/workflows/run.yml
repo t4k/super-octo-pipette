@@ -10,6 +10,8 @@ jobs:
     steps:
       - run: echo '${{ github.event.issue.author_association }}'
 
+      - uses: actions/checkout@v4
+
       - uses: stefanbuck/github-issue-praser@v3
         id: issue-parser
         with:
