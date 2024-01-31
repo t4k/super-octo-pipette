@@ -7,5 +7,6 @@
 
 ## set up actions that will respond to new issues
 
+- [Workflow permissions](https://github.com/t4k/super-octo-pipette/settings/actions) must be set with **Read and write permissions**
 - [`run.yml`](.github/workflows/run.yml)
   - parse the newly created issue and use the data in an external process
